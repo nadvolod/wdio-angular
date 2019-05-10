@@ -2,6 +2,14 @@
 // https://karma-runner.github.io/1.0/config/configuration-file.html
 
 module.exports = function (config) {
+  // var customLaunchers = {
+  //   'SL_Chrome': {
+  //     base: 'SauceLabs',
+  //     browserName: 'chrome',
+  //     version: 'latest',
+  //     platform: 'OS X 10.12'
+  //   }
+  // };
   config.set({
     basePath: '',
     frameworks: ['jasmine', '@angular-devkit/build-angular'],
@@ -21,6 +29,9 @@ module.exports = function (config) {
       fixWebpackSourcePaths: true
     },
     reporters: ['progress', 'kjhtml'],
+    //customLaunchers: customLaunchers,
+    // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
+    //browsers: Object.keys(customLaunchers),
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
